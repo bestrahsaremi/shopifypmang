@@ -1,0 +1,1 @@
+web: gunicorn shopifypman.wsgi --log-file -
