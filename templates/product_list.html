@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Product List
+{% endblock %}
+
+
+{% block content %}
+    {% for product in products %}
+        <div class="card m-4">
+            <div class="card-header text-info">Product ID: {{product.id}}</div>
+            <div class="card-body">
+            <h5 class="card-title text-primary">Product Name: {{product.name}}</h5>
+            <p class="card-text text-muted">{{product.description}}.</p>
+            Product Type: <a href="#" class="btn btn-primary">{{product.product_type}}</a>
+            </div>
+        </div>
+    {% endfor %}
+
+
+
+{% endblock %}
